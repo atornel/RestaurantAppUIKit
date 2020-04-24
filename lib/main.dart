@@ -4,6 +4,8 @@ import 'package:restaurant_ui_kit/providers/app_provider.dart';
 import 'package:restaurant_ui_kit/screens/splash.dart';
 import 'package:restaurant_ui_kit/util/const.dart';
 
+import 'util/const.dart';
+
 void main() {
   runApp(
     MultiProvider(
@@ -26,6 +28,7 @@ class MyApp extends StatelessWidget {
           navigatorKey: appProvider.navigatorKey,
           title: Constants.appName,
           theme: appProvider.theme,
+          darkTheme: Constants.darkTheme,
           home: SplashScreen(),
         );
       },

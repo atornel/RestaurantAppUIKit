@@ -14,14 +14,14 @@ description: A new Flutter application.
 version: 5.0+50
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.3.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.2
-  introduction_screen: ^1.0.5+2
-  shared_preferences: ^0.5.6
+  introduction_screen: ^1.0.8
+  shared_preferences: ^0.5.4+5
   font_awesome_flutter: ^8.5.0
   carousel_slider: ^1.4.1
   provider: ^4.0.1
