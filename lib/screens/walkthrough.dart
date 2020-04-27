@@ -13,8 +13,8 @@ class _WalkthroughState extends State<Walkthrough> {
   Widget build(BuildContext context) {
     List<PageViewModel> pages = [
       PageViewModel(
-        "Fresh Food",
-        "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+        title: "Fresh Food",
+        body: "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
             " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
             "dui. Nulla porttitor accumsan tincidunt.",
         image: Image.asset(
@@ -28,17 +28,14 @@ class _WalkthroughState extends State<Walkthrough> {
             color: Theme.of(context).accentColor,
           ),
           bodyTextStyle: TextStyle(fontSize: 15.0),
-          dotsDecorator: DotsDecorator(
-            activeColor: Theme.of(context).accentColor,
-            activeSize: Size.fromRadius(8),
-          ),
+
           pageColor: Theme.of(context).primaryColor,
         ),
       ),
 
       PageViewModel(
-        "Fast Delivery",
-        "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+        title: "Fast Delivery",
+        body: "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
             " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
             "dui. Nulla porttitor accumsan tincidunt.",
         image: Image.asset(
@@ -52,17 +49,14 @@ class _WalkthroughState extends State<Walkthrough> {
             color: Theme.of(context).accentColor,
           ),
           bodyTextStyle: TextStyle(fontSize: 15.0),
-          dotsDecorator: DotsDecorator(
-            activeColor: Theme.of(context).accentColor,
-            activeSize: Size.fromRadius(8),
-          ),
+
           pageColor: Theme.of(context).primaryColor,
         ),
       ),
 
       PageViewModel(
-        "Easy Payment",
-        "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+        title:"Easy Payment",
+        body:"Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
             " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
             "dui. Nulla porttitor accumsan tincidunt.",
         image: Image.asset(
@@ -76,10 +70,6 @@ class _WalkthroughState extends State<Walkthrough> {
             color: Theme.of(context).accentColor,
           ),
           bodyTextStyle: TextStyle(fontSize: 15.0),
-          dotsDecorator: DotsDecorator(
-            activeColor: Theme.of(context).accentColor,
-            activeSize: Size.fromRadius(8),
-          ),
           pageColor: Theme.of(context).primaryColor,
         ),
       ),
