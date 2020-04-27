@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:restaurant_ui_kit/screens/login.dart';
 import 'package:restaurant_ui_kit/screens/register.dart';
 import 'package:flutter/services.dart';
-import 'package:restaurant_ui_kit/util/const.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 
 class JoinApp extends StatefulWidget {
