@@ -205,7 +205,9 @@ class _ProfileState extends State<Profile> {
               ),
             ),
 
-            ListTile(
+             MediaQuery.of(context).platformBrightness == Brightness.dark
+                 ? SizedBox()
+                 : ListTile(
               title: Text(
                 "Dark Theme",
                 style: TextStyle(

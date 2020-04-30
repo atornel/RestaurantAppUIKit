@@ -9,70 +9,35 @@ class Walkthrough extends StatefulWidget {
 }
 
 class _WalkthroughState extends State<Walkthrough> {
+
+  List pageInfos = [
+    {
+      "title": "Fresh Food",
+      "body": "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+          " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
+          "dui. Nulla porttitor accumsan tincidunt.",
+      "img": "assets/on1.png",
+    },
+    {
+      "title": "Fast Delivery",
+      "body": "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+          " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
+          "dui. Nulla porttitor accumsan tincidunt.",
+      "img": "assets/on2.png",
+    },
+    {
+      "title": "Easy Payment",
+      "body": "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+          " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
+          "dui. Nulla porttitor accumsan tincidunt.",
+      "img": "assets/on3.png",
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     List<PageViewModel> pages = [
-      PageViewModel(
-        title: "Fresh Food",
-        body: "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
-            " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
-            "dui. Nulla porttitor accumsan tincidunt.",
-        image: Image.asset(
-          "assets/on1.png",
-          height: 175.0,
-        ),
-        decoration: PageDecoration(
-          titleTextStyle: TextStyle(
-            fontSize: 28.0,
-            fontWeight: FontWeight.w600,
-            color: Theme.of(context).accentColor,
-          ),
-          bodyTextStyle: TextStyle(fontSize: 15.0),
-
-          pageColor: Theme.of(context).primaryColor,
-        ),
-      ),
-
-      PageViewModel(
-        title: "Fast Delivery",
-        body: "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
-            " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
-            "dui. Nulla porttitor accumsan tincidunt.",
-        image: Image.asset(
-          "assets/on2.png",
-          height: 185.0,
-        ),
-        decoration: PageDecoration(
-          titleTextStyle: TextStyle(
-            fontSize: 28.0,
-            fontWeight: FontWeight.w600,
-            color: Theme.of(context).accentColor,
-          ),
-          bodyTextStyle: TextStyle(fontSize: 15.0),
-
-          pageColor: Theme.of(context).primaryColor,
-        ),
-      ),
-
-      PageViewModel(
-        title:"Easy Payment",
-        body:"Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
-            " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
-            "dui. Nulla porttitor accumsan tincidunt.",
-        image: Image.asset(
-          "assets/on3.png",
-          height: 175.0,
-        ),
-        decoration: PageDecoration(
-          titleTextStyle: TextStyle(
-            fontSize: 28.0,
-            fontWeight: FontWeight.w600,
-            color: Theme.of(context).accentColor,
-          ),
-          bodyTextStyle: TextStyle(fontSize: 15.0),
-          pageColor: Theme.of(context).primaryColor,
-        ),
-      ),
+      for(int i = 0; i<pageInfos.length; i++)
+        _buildPageModel(pageInfos[i])
     ];
 
     return WillPopScope(
@@ -119,6 +84,30 @@ class _WalkthroughState extends State<Walkthrough> {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  _buildPageModel(Map item){
+    return PageViewModel(
+      title: item['title'],
+      body: item['body'],
+      image: Image.asset(
+        item['img'],
+        height: 185.0,
+      ),
+      decoration: PageDecoration(
+        titleTextStyle: TextStyle(
+          fontSize: 28.0,
+          fontWeight: FontWeight.w600,
+          color: Theme.of(context).accentColor,
+        ),
+        bodyTextStyle: TextStyle(fontSize: 15.0),
+//        dotsDecorator: DotsDecorator(
+//          activeColor: Theme.of(context).accentColor,
+//          activeSize: Size.fromRadius(8),
+//        ),
+        pageColor: Theme.of(context).primaryColor,
       ),
     );
   }
